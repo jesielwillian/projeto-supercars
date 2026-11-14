@@ -645,7 +645,7 @@ img.is-empty {
     #view-home .hero-layout {
         gap: 1.75rem;
         grid-template-columns: minmax(0, 1fr);
-        padding-bottom: 3rem;
+        padding-bottom: 2.5rem;
         padding-top: 3.5rem !important;
     }
 

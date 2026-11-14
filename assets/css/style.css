@@ -484,6 +484,7 @@ img.is-empty {
 }
 
 @keyframes floaty {
+
     0%,
     100% {
         transform: translateY(0);
@@ -495,6 +496,7 @@ img.is-empty {
 }
 
 @keyframes pulseDot {
+
     0%,
     100% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, .6);
@@ -521,6 +523,7 @@ img.is-empty {
 }
 
 @keyframes shake {
+
     20%,
     60% {
         transform: translateX(-8px);
@@ -633,6 +636,7 @@ img.is-empty {
 }
 
 @media (max-width: 767px) and (orientation: portrait) {
+
     #carsGrid,
     #favGrid {
         grid-template-columns: minmax(0, 1fr);
@@ -656,6 +660,7 @@ img.is-empty {
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
+
     #carsGrid,
     #favGrid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -687,6 +692,7 @@ img.is-empty {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -937,6 +943,7 @@ nav button,
 /* Em telas sem hover (celular/tablet), mantém o enquadramento sem zoom acidental. */
 
 @media (hover: none) {
+
     .card:hover .image-zoom,
     .details-visual:hover .image-zoom,
     .admin-image-frame:hover .image-zoom {
@@ -1189,6 +1196,7 @@ textarea:focus {
 }
 
 @media (hover: none) {
+
     .card:hover,
     .card:active,
     .card:focus,
@@ -1441,6 +1449,7 @@ textarea:focus {
 /* Tablets em retrato: iPad Mini e iPad Pro 13 */
 
 @media screen and (min-width: 600px) and (max-width: 1100px) and (orientation: portrait) {
+
     .desktop-nav,
     .desktop-auth {
         display: none !important;
@@ -1464,7 +1473,7 @@ textarea:focus {
         width: 100%;
     }
 
-    .site-header > div:first-child {
+    .site-header>div:first-child {
         padding-left: 40px !important;
         padding-right: 40px !important;
     }
@@ -1473,6 +1482,7 @@ textarea:focus {
 /* iPad Mini em paisagem: mantém o mesmo cabeçalho desktop do iPad Pro 13 */
 
 @media screen and (min-width: 768px) and (max-width: 1100px) and (orientation: landscape) {
+
     .desktop-nav,
     .desktop-auth {
         display: flex !important;
@@ -1526,27 +1536,27 @@ textarea:focus {
         width: 100%;
     }
 
-    .site-header-inner > a:first-child {
+    .site-header-inner>a:first-child {
         flex: 0 0 auto;
         gap: 0.5rem;
     }
 
-    .site-header-inner > a:first-child > div:first-child {
+    .site-header-inner>a:first-child>div:first-child {
         height: 3.5rem;
         width: 3.5rem;
     }
 
-    .site-header-inner > a:first-child .font-display {
+    .site-header-inner>a:first-child .font-display {
         font-size: 0.8rem;
         white-space: nowrap;
     }
 
-    .site-header-inner > a:first-child .font-mono {
+    .site-header-inner>a:first-child .font-mono {
         font-size: 0.55rem;
         white-space: nowrap;
     }
 
-    #view-backend > .backend-container {
+    #view-backend>.backend-container {
         box-sizing: border-box;
         margin-inline: auto;
         max-width: 1265px;
@@ -1568,7 +1578,7 @@ textarea:focus {
         width: 100%;
     }
 
-    #view-backend > .backend-container {
+    #view-backend>.backend-container {
         box-sizing: border-box;
         margin-inline: auto;
         max-width: 1265px;
@@ -1582,18 +1592,21 @@ textarea:focus {
    AJUSTES GLOBAIS — HERO E CABEÇALHO TABLET HORIZONTAL
    ========================================================= */
 
-/* Mesmo espaçamento e estrutura do hero em todos os dispositivos */
+/* Ajustes do hero exclusivos para desktop */
 
-#view-home .hero-layout {
-    gap: 1.75rem;
-    grid-template-columns: minmax(0, 1fr);
-    padding-bottom: 2.5rem;
-    padding-top: 3.5rem !important;
+@media screen and (min-width: 1101px) {
+    #view-home .hero-layout {
+        gap: 1.75rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem !important;
+    }
 }
 
 /* iPad Mini em paisagem — viewport 1024 × 768 */
 
 @media screen and (min-width: 768px) and (max-width: 1100px) and (orientation: landscape) {
+
     .desktop-nav,
     .desktop-auth {
         display: flex !important;

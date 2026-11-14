@@ -1479,6 +1479,10 @@ textarea:focus {
         padding-left: 40px !important;
         padding-right: 40px !important;
     }
+
+    #adminWrap {
+        padding-top: 24rem;
+    }
 }
 
 /* iPad Mini em paisagem: mantém o mesmo cabeçalho desktop do iPad Pro 13 */
@@ -1623,5 +1627,23 @@ textarea:focus {
     #mobileMenu {
         display: none !important;
         visibility: hidden !important;
+    }
+}
+
+/* TABLET — mantém o rodapé no limite inferior da tela quando o conteúdo é curto */
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    body>main {
+        flex: 1 0 auto;
+    }
+
+    body>footer {
+        flex-shrink: 0;
     }
 }

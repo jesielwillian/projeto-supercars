@@ -554,6 +554,7 @@ img.is-empty {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     #view-home .hero-layout {
         grid-template-columns: minmax(0, 1fr);
+        padding-bottom: 2rem;
     }
 
     #view-home .hero-layout> :first-child {
@@ -667,8 +668,9 @@ img.is-empty {
     }
 
     #view-home .hero-layout {
+        display: grid;
         gap: 1rem;
-        grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+        grid-template-columns: 1fr;
         padding-bottom: 2rem;
         padding-top: 1.5rem;
     }
